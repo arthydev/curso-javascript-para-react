@@ -8,6 +8,12 @@ const $root = document.querySelector("#root")
 
 const $htmlCardGame =  CardGame()
 
-console.log($htmlCardGame)
 
-$root.insertAdjacentHTML('beforeend', $htmlCardGame)
+function multiCards() {
+    for (let i = 0; i <= 6; i++){
+        $root.insertAdjacentHTML('beforeend', $htmlCardGame)
+    }
+}
+
+multiCards()
+
