@@ -3,23 +3,14 @@ import './src/styles/elements/base.css'
 import './src/styles/settings/reset.css'
 
 
-
-import CardGame from './src/components/CardGame'
 import PlayerText from './src/components/PlayerText'
+import BoardGame from './src/objects/BoardGame'
 
 const $root = document.querySelector("#root")
+const $htmlBoardGame = BoardGame(6) //Desennha o tabuleiro
 
-const $htmlCardGame =  CardGame()
 const $htmlPlayerText = PlayerText("Player 1")
 
 
-
-function multiCards() {
-    for (let i = 0; i < 6; i++){
-        $root.insertAdjacentHTML('beforeend', $htmlCardGame)
-    }
-}
-
-multiCards()
-
-$root.insertAdjacentHTML('beforeend', $htmlPlayerText)
+$root.insertAdjacentHTML('beforeend', $htmlBoardGame)
+/*$root.insertAdjacentHTML('beforeend', $htmlPlayerText)*/
